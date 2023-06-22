@@ -95,7 +95,7 @@
     @apply relative w-full mx-auto flex flex-col ;
   }
   .block-wrap{
-    @apply relative w-full h-[80vh] flex justify-center 
+    @apply relative w-full h-[80vh] min-h-[900px] flex justify-center 
     flex-shrink-0 overflow-hidden ;
     &:last-child{ @apply mb-[100px] pb-[100px]; }
     .big-typo { 
@@ -103,12 +103,12 @@
       text-[#152271] top-[10vh] ;
     }
     .copy-wrap{
-      @apply flex w-[40vw] flex-col absolute left-[50vw] top-[45vh];
+      @apply flex w-[40vw] max-w-[540px] flex-col absolute left-[50vw] top-[45vh];
       .copy-item {
         @apply relative text-[32px] font-medium tracking-[-0.03em]
-        flex items-center my-4 opacity-0 origin-top-left;
+        flex items-center my-6 opacity-0 origin-top-left;
         &::before {
-          @apply content-[''] block w-2 h-2 bg-white rounded-full absolute left-0 top-[15px] ;
+          @apply content-[''] block w-2 h-2 bg-[#50ABFF] rounded-full absolute left-0 top-[15px] ;
         }
         span { @apply pl-6 font-bold leading-[1.25em] break-keep text-white ; }
       }

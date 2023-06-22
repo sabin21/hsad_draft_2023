@@ -49,22 +49,22 @@ gsap.registerPlugin(ScrollTrigger);
 
   summaryWraps.forEach((summary, i)=>{
     gsap.fromTo(summary.querySelector('.big-typo'), {left:'-100vw', color:'#040A2E'},{
-      left:'10vw', color:'#30A7B7',
+      left:'10vw', color:'#2371B8',
       scrollTrigger:{
         trigger:summary,
         scrub:true,
         start:'top 50%',
-        end:'bottom bottom'
+        end:'top 10%'
       }
     });
     gsap.fromTo(summary.querySelectorAll('.copy-item'),{opacity:0, y:200, scale:1.4}, {
       opacity: 1, y:0, scale:1, duration:1,
-      delay: 0.5 + (0.5*i),
+      // delay: 0.5 + (0.5*i),
       scrollTrigger:{
         trigger:summary,
         scrub:true,
-        start:'top 20%',
-        end:'bottom 50%'
+        start:'top 50%',
+        end:'bottom 90%'
       }
     })
   });
@@ -75,7 +75,6 @@ gsap.registerPlugin(ScrollTrigger);
 // Work cards Stack -----
 
 let cards = gsap.utils.toArray('.card');
-// let stackHeight = window.innerHeight * 0.25;
 let stackHeight = window.innerHeight * 0.25;
 
 cards.forEach((card, i) => {
