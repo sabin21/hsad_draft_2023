@@ -1,0 +1,1 @@
+class NodeUniform{constructor(e,t,o,s=void 0){this.isNodeUniform=!0,this.name=e,this.type=t,this.node=o,this.needsUpdate=s}get value(){return this.node.value}set value(e){this.node.value=e}}export default NodeUniform;

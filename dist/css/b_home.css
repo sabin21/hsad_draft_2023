@@ -1,0 +1,147 @@
+body{
+  background-color:#060606; font-family: 'Pretendard';
+}
+.page-wrap{ @apply overflow-x-hidden ; }
+.header {
+  @apply fixed w-full h-auto min-h-[80px] z-[1000] transition-[top];
+  .logo { 
+    @apply absolute w-[88px] h-[88px] left-[80px]; 
+  }
+  .header-nav {
+    @apply absolute w-[622px] h-[64px] 
+    rounded-[6px] right-[24px] top-6 flex justify-center items-center;
+    .nav-img {
+      @apply w-[622px] h-[64px] ;
+    }
+  }
+}
+
+.btn-circle{
+  @apply fixed z-[100] w-[130px] h-[130px] bottom-8 right-8 
+  ;
+  button {
+    @apply relative w-full h-full flex justify-center items-center ; 
+  }
+  svg { @apply absolute top-0 left-0; }
+  .btn-circle-text{
+    @apply text-white tracking-[0.34em] fill-white font-bold uppercase;
+  }
+  .inner-circle {
+    @apply absolute w-[60%] h-[60%] border border-white 
+    rounded-full bg-black flex justify-center items-center ;
+  }
+}
+
+/*-------------------------*/
+
+.page-head{
+  @apply absolute w-full h-[calc(55vh-60px)] min-h-[480px] z-[20] 
+  overflow-hidden bg-[#111415] ;
+  .headline-copy {
+    @apply absolute text-[5vw] text-white font-[700] leading-[1em] 
+    tracking-[-0.03em] bottom-20 left-20 ;
+    font-family: "Pretendard";
+    .keyword { @apply text-white ; }
+  }
+}
+
+.case-study-title {
+  @apply fixed w-[65vmin] text-white top-[100vh] left-[calc(50vw-75vmin)] opacity-0 
+  transition-all duration-[1500] ;
+  h2 { @apply text-[2.5vw] font-bold leading-[1em] ; }
+  .title {
+    @apply text-[2.7vmin] font-semibold pt-3 text-[#A1A1A1] ; 
+  }
+  &.two {
+    @apply left-[calc(50vw+3vmin)] ;
+  }
+}
+#hero-canvas{
+  @apply fixed w-full h-[120vh] top-0 left-0 overflow-hidden z-[-1];
+}
+.hero-overlay {
+  @apply block fixed w-full h-screen top-0 left-0 z-[2] bg-black opacity-0 ;
+  pointer-events: none;
+}
+.section-title{
+  @apply relative w-full px-16 mt-20 ;
+  h2{ @apply text-[5vw] text-white font-bold ;}
+}
+.sections-wrap{
+  @apply w-full relative bg-[#060606] mt-[180vh] z-10;
+}
+.section-insights{
+  @apply relative w-full max-w-[1480px] mx-auto 
+  pt-28 pb-[200px];
+  h2 { @apply text-[5vw] text-white font-bold }
+  .con-img {
+    @apply max-w-full pt-20;
+  }
+  .row-scroller {
+    @apply relative w-auto h-screen pl-16 flex pt-16;
+    grid-column-gap: 48px;
+  }
+}
+
+.section-works{
+  @apply w-full h-auto flex flex-col py-[160px] border-t border-gray-700 z-10;
+  .typo-row {
+    @apply w-full flex gap-4 pl-20 items-center my-2; 
+  }
+  .typo {
+    @apply block text-white text-[8vw] leading-[1em] uppercase;
+    font-family: "Noto Serif Display";
+  }
+}
+
+.footer {
+  @apply w-full py-20 pl-20;
+  .footer-img {
+    @apply w-[1060px] ;
+  }
+}
+
+/*---------------------------*/
+
+.section-news {
+  @apply w-full h-screen flex overflow-hidden min-h-[800px] 
+  border-t border-b border-gray-700 ;
+  .section-title {
+    @apply text-white text-[3vw] pl-0 font-bold mb-10 ;
+  }
+  .news-wrap {
+    @apply relative w-full max-w-[1680px] mx-auto ;  
+  }
+  .news-list-wrap{
+    @apply relative w-full ;
+    .news-list-row {
+      @apply relative w-full h-[120px] py-8 flex border-t border-[rgba(255,255,255,0.2)] z-10;
+      .date-wrap{
+        @apply w-[64px] flex flex-col text-[#999999] ;
+        .month { @apply block text-[18px] uppercase text-[#999999] ; }
+        .day {
+          @apply block text-[28px] font-bold text-[#999999] leading-[1em];
+        }
+      }
+      >h3 { @apply text-white text-[1.6vw] pl-8 pt-2;}
+      >.category { @apply text-base text-gray-400 absolute right-0 top-11 ; }
+    }
+  }
+  
+  
+}
+.hover-image {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 450px; height: 300px;
+  z-index: 1;
+  aspect-ratio: 0.9;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+  background: gray;
+  object-fit: cover;
+  pointer-events: none; overflow:hidden;
+}
+
+/*---------------------------*/

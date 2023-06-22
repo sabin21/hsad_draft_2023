@@ -1,0 +1,98 @@
+body{
+  background-color:#060606; font-family: 'Pretendard';
+}
+.page-wrap{ @apply overflow-x-hidden ; }
+.header {
+  @apply fixed w-full h-auto min-h-[80px] z-[1000] transition-[top];
+  .logo { 
+    @apply absolute w-[100px] h-[100px] left-[50vw] translate-x-[-50%]; 
+  }
+  .header-nav {
+    @apply absolute w-[196px] h-[64px] bg-[#21272C] 
+    rounded-[4px] right-[24px] top-4 flex justify-center items-center;
+    .nav-img {
+      @apply w-[164px] h-[48px] ;
+    }
+  }
+}
+
+.btn-circle{
+  @apply fixed z-[100] w-[130px] h-[130px] bottom-8 right-8 
+  ;
+  button {
+    @apply relative w-full h-full flex justify-center items-center ; 
+  }
+  svg { @apply absolute top-0 left-0; }
+  .btn-circle-text{
+    @apply text-white tracking-[0.34em] fill-white font-bold uppercase;
+  }
+  .inner-circle {
+    @apply absolute w-[60%] h-[60%] border border-white 
+    rounded-full bg-black flex justify-center items-center ;
+  }
+}
+/*-------------------------*/
+
+.page-head{
+  @apply absolute w-full h-[calc(55vh-60px)] min-h-[480px] z-[20] 
+  overflow-hidden bg-[#111415] ;
+  .headline-copy {
+    @apply absolute text-[11vmin] text-gray-400 font-[300] leading-[1em] 
+    tracking-[-0.03em] bottom-20 left-20 ;
+    font-family: "Noto Serif Display";
+    .keyword { @apply text-white ; }
+  }
+}
+
+.case-study-title {
+  @apply fixed w-[65vmin] text-white top-[100vh] left-[calc(50vw-75vmin)] opacity-0 
+  transition-all duration-[1500];
+  h2 { @apply text-[6vmin] font-bold leading-[1em] ; }
+  
+  .title {
+    @apply text-[2.7vmin] font-semibold pt-3 text-[#A1A1A1] ; 
+  }
+  &.two {
+    @apply left-[calc(50vw+3vmin)] ;
+  }
+}
+#hero-canvas{
+  @apply fixed w-full h-[120vh] top-0 left-0 overflow-hidden z-[-1];
+}
+.section-title{
+  @apply relative w-full px-16 mt-20 ;
+  h2{ @apply text-[5vw] text-white font-bold ;}
+}
+.sections-wrap{
+  @apply w-full relative bg-[#060606] mt-[180vh] ;
+}
+.section-insights{
+  @apply relative w-full max-w-[1480px] mx-auto 
+  pt-28 pb-[200px];
+  h2 { @apply text-[5vw] text-white font-bold }
+  .con-img {
+    @apply max-w-full pt-20;
+  }
+  .row-scroller {
+    @apply relative w-auto h-screen pl-16 flex pt-16;
+    grid-column-gap: 48px;
+  }
+}
+
+.section-works{
+  @apply w-full h-auto flex flex-col py-[160px] border-t border-gray-700;
+  .typo-row {
+    @apply w-full flex gap-4 pl-20 items-center my-2; 
+  }
+  .typo {
+    @apply block text-white text-[8vw] leading-[1em] uppercase;
+    font-family: "Noto Serif Display";
+  }
+}
+
+.footer {
+  @apply w-full py-20 pl-20;
+  .footer-img {
+    @apply w-[1060px] ;
+  }
+}

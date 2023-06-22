@@ -1,0 +1,92 @@
+*{ margin:0; padding:0; }
+body{
+  overflow-x:hidden;
+}
+#hero-canvas{
+  @apply fixed w-full h-screen overflow-hidden min-h-[720px];
+}
+.header {
+  @apply w-full fixed top-0 left-0 h-[20vh] z-[99999] bg-white 
+  border-b-[2px] border-black overflow-hidden ;
+  .logo {
+    @apply absolute w-[20vh] h-full bg-white flex justify-center items-center 
+    border-r-[2px] border-black;  
+  }
+  .nav{
+    @apply absolute w-[164px] h-[64px] right-[20px] top-[8px] ;
+  }
+  .filter{
+    @apply absolute w-[672px] h-[48px] right-[28px] bottom-[24px] cursor-pointer ;
+  }
+  .search-full{
+    @apply absolute w-[calc(100%-20vh)] h-full bg-white top-0 right-[-100%] 
+    transition-[right] cursor-pointer ;
+    &.active {
+      right:0;
+    }
+    .search-img {
+      @apply absolute w-[1359px] h-[114px] m-auto right-[20px] 
+      top-[50%] translate-y-[-50%] ;
+    }
+  }
+}
+
+.line-wrap {
+  @apply fixed w-[900vw] h-screen -top-[-1px] left-0 min-h-[720px] z-[2] ;
+  .wrap-border {
+    @apply block w-full h-[2px] border-b-[2px] border-black fixed left-0 ;
+  }
+}
+.wrapper{
+  @apply h-[80vh] fixed top-[20vh] left-[40vh] grid min-h-[720px] z-[1];
+  grid-template-rows: repeat(auto-fill, 20vh);
+  grid-template-columns: repeat(auto-fill, 32vh);
+  grid-auto-flow:column; grid-gap: 0 0px; white-space: nowrap;
+  .thumb{
+    @apply relative w-[32vh] h-[40vh] bg-gray-200 bg-center bg-cover;
+    grid-column-start: var(--position);
+    grid-row-start: var(--vpos);
+    cursor:pointer;
+    &#thumb-1 { @apply bg-[url(../img/d_home/card_post_1.png)]; }
+    &#thumb-2 { @apply bg-[url(../img/d_home/card_ad_1.png)]; }
+    &#thumb-3 { @apply bg-[url(../img/d_home/card_post_2.png)]; }
+    &#post-1 { @apply bg-[url(../img/d_home/card_post_1.png)]; }
+    &#post-2 { @apply bg-[url(../img/d_home/card_post_2.png)]; }
+    &#post-3 { @apply bg-[url(../img/d_home/card_post_3.png)]; }
+    &#post-4 { @apply bg-[url(../img/d_home/card_post_4.png)]; }
+    &#post-5 { @apply bg-[url(../img/d_home/card_post_5.png)]; }
+    &#post-6 { @apply bg-[url(../img/d_home/card_post_6.png)]; }
+    &#post-7 { @apply bg-[url(../img/d_home/card_post_7.png)]; }
+    &#post-8 { @apply bg-[url(../img/d_home/card_post_8.png)]; }
+    &#post-9 { @apply bg-[url(../img/d_home/card_post_9.png)]; }
+    &#post-10 { @apply bg-[url(../img/d_home/card_post_10.png)]; }
+    &#post-11 { @apply bg-[url(../img/d_home/card_post_11.png)]; }
+    &#post-12 { @apply bg-[url(../img/d_home/card_post_12.png)]; }
+    &#post-13 { @apply bg-[url(../img/d_home/card_post_13.png)]; }
+    &#post-14 { @apply bg-[url(../img/d_home/card_post_14.png)]; }
+    &#post-15 { @apply bg-[url(../img/d_home/card_post_15.png)]; }
+
+    &#ad-1 { @apply bg-[url(../img/d_home/card_ad_1.png)]; }
+    &#ad-2 { @apply bg-[url(../img/d_home/card_ad_2.png)]; }
+    &#ad-3 { @apply bg-[url(../img/d_home/card_ad_3.png)]; }
+    &#ad-4 { @apply bg-[url(../img/d_home/card_ad_4.png)]; }
+    &#ad-5 { @apply bg-[url(../img/d_home/card_ad_5.png)]; }
+    &#ad-6 { @apply bg-[url(../img/d_home/card_ad_6.png)]; }
+    &#ad-7 { @apply bg-[url(../img/d_home/card_ad_7.png)]; }
+    &#ad-8 { @apply bg-[url(../img/d_home/card_ad_8.png)]; }
+    &#ad-9 { @apply bg-[url(../img/d_home/card_ad_9.png)]; }
+    &#ad-10 { @apply bg-[url(../img/d_home/card_ad_10.png)]; }
+    &#ad-11 { @apply bg-[url(../img/d_home/card_ad_11.png)]; }
+    &#ad-12 { @apply bg-[url(../img/d_home/card_ad_12.png)]; }
+    &#ad-13 { @apply bg-[url(../img/d_home/card_ad_13.png)]; }
+    &#ad-14 { @apply bg-[url(../img/d_home/card_ad_14.png)]; }
+    &#ad-15 { @apply bg-[url(../img/d_home/card_ad_15.png)]; }
+
+    .icon {
+      @apply absolute left-0 top-0 w-[40px] h-[40px] ;
+      img{ @apply max-w-full w-full ;}
+    }
+  }  
+}
+
+

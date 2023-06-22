@@ -1,0 +1,9 @@
+.page-wrap{
+  font-family: 'Pretendard'; 
+}
+.section-hero {
+  @apply w-full h-screen ;
+}
+#hero-canvas{
+  @apply w-full h-screen bg-gray-500 overflow-hidden;
+}
